@@ -118,10 +118,10 @@ class WebController extends Controller
          try{
 
             Mail::send('emails.contacto', $datos, function($message) use ($datos) {
-               $cc = 'web@testphinet.tk';
+               $cc = config('app.email_to');
                $message->to($cc,'Informes ISATEC')->subject($datos['nombre']);
 
-               $message->from('web@testphinet.tk','Pagina Web');
+               $message->from(config('mail.username'),'Pagina Web');
             });
 
             return response()->json(["rpta"=> "1"]);
@@ -186,7 +186,7 @@ class WebController extends Controller
 
                    $message->to($datos['email'])->subject('ISATEC');
 
-                   $message->from('web@testphinet.tk','ISATEC: Pre Inscripción');
+                   $message->from(config('mail.username'),'ISATEC: Pre Inscripción');
                 });
 
              }

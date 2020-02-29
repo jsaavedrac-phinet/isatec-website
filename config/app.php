@@ -234,4 +234,5 @@ return [
     'url_api' => env('URL_API'),
     'aula_virtual' =>env('AULA_VIRTUAL'),
     'deploy_secret' => env('APP_DEPLOY_SECRET'),
+    'email_to'      => env('EMAIL_TO'),
 ];
