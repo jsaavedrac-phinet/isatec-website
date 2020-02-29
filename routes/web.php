@@ -26,9 +26,9 @@ Route::name('web.')->group(function(){
 Route::post('deploy', 'DeployController@deploy');
 Auth::routes();
 // CARGAR POR DEFECTO EL LOGIN
-Route::get('admin/','Auth\LoginController@showLoginForm')->name('login');
+Route::get('login','Auth\LoginController@showLoginForm')->name('login');
 // VERIFICAR USUARIO
-Route::post('admin/','Auth\LoginController@login')->name('verificar');
+Route::post('login','Auth\LoginController@login')->name('verificar');
 Route::name('virtual-library.')->prefix('virtual-library')->group(function(){
     Route::get('/','VirtualLibraryController@index')->name('index');
     Route::get('/byTag/{tag}','VirtualLibraryController@byTag')->name('byTag');
