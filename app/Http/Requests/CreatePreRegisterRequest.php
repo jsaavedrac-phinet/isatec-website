@@ -71,8 +71,10 @@ class CreatePreRegisterRequest extends FormRequest
                 $student = $student->id;
             }
              $sanitize = $this->all();
+
+                $program =\App\Program::find(explode("xx",$this->request->get('program_id'))[0]);
                 $sanitize['code'] = $this->request->get('identification_number');
-                $sanitize['codeprogram'] = $this->request->get('identification_number').'-'.strtolower(explode("xx",$this->request->get('program_id'))[0]);
+                $sanitize['codeprogram'] = $this->request->get('identification_number').'-'.$program->first_letter();
                 $sanitize['curricular_plan_id'] = explode("xx",$this->request->get('program_id'))[1];
                 $sanitize['program_id'] =explode("xx",$this->request->get('program_id'))[0];
                 $sanitize['pre_registration'] = $pre_reg;
