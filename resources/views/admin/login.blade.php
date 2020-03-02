@@ -37,7 +37,7 @@
 </head>
 <body>
     @if ($navegador == 'Safari')
-    <div class="content" style="background: url({{ asset('images/bg-login.jpg') }}); background-repeat: no-repeat; background-size: cover;"></div>
+    <div class="content" style="background: url({{ asset('images/bg-login.jpg') }}); background-repeat: no-repeat; background-size: cover;">
     @else
 	<div class="content" style="background: url({{ asset('images/bg-login.jpg') }});background: url({{ asset('images/bg-login.webp') }}); background-repeat: no-repeat; background-size: cover;">
     @endif
