@@ -194,9 +194,9 @@ class WebController extends Controller
                  DB::connection('pgsql2')->rollback();
                 return response()->json(["message"=> "error: ".$e->getMessage(),'type' => 'error']);
              }
-            $guzzleService->post(config('app.url_api').'pre_registration',['id'=> $pre_registration->id]);
 
-            DB::connection('pgsql2')->commit();
+             DB::connection('pgsql2')->commit();
+             $guzzleService->post(config('app.url_api').'pre_registration',['id'=> $pre_registration->id]);
             return response()->json(['message' => 'Te has pre-registrado exitosamente.<br><br>Te hemos enviando un correo a : '.$request->email.'.<br><br><h5>No olvides revisar tu <strong>SPAM</strong> si es que no encuentras el correo.</h5>','function' => 'reset_form']);
         }catch(QueryException $e){
             DB::connection('pgsql2')->rollBack();
