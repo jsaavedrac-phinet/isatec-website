@@ -72,7 +72,7 @@ class CreatePreRegisterRequest extends FormRequest
             }
              $sanitize = $this->all();
                 $sanitize['code'] = $this->request->get('identification_number');
-                $sanitize['codeprogram'] = $this->request->get('identification_number').'-'.$this->request->get('program_id');
+                $sanitize['codeprogram'] = $this->request->get('identification_number').'-'.strtolower(explode("xx",$this->request->get('program_id'))[0]);
                 $sanitize['curricular_plan_id'] = explode("xx",$this->request->get('program_id'))[1];
                 $sanitize['program_id'] =explode("xx",$this->request->get('program_id'))[0];
                 $sanitize['pre_registration'] = $pre_reg;

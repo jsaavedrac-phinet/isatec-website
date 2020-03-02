@@ -135,7 +135,7 @@ class WebController extends Controller
         return view('web.admision');
     }
 
-    public function pre_register(CreatePreRegisterRequest $request){
+    public function pre_register(CreatePreRegisterRequest $request,GuzzleService $guzzleService){
         DB::connection('pgsql2')->beginTransaction();
         try{
             $student = Student::find($request->student_id);
@@ -194,6 +194,7 @@ class WebController extends Controller
                  DB::connection('pgsql2')->rollback();
                 return response()->json(["message"=> "error: ".$e->getMessage(),'type' => 'error']);
              }
+            $guzzleService->post(config('app.url_api').'pre_registration',['id'=> $pre_registration->student_id]);
 
             DB::connection('pgsql2')->commit();
             return response()->json(['message' => 'Te has pre-registrado exitosamente.<br><br>Te hemos enviando un correo a : '.$request->email.'.<br><br><h5>No olvides revisar tu <strong>SPAM</strong> si es que no encuentras el correo.</h5>','function' => 'reset_form']);
