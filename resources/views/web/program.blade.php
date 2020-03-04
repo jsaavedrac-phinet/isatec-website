@@ -56,6 +56,9 @@
     #transversales .modules .module ul.teaching_units li div{font-size: 0.9em;}
 
     .duration{background: #262626; color: #FFF; padding: 1em; min-width: 350px;}
+    @media(max-width: 1023px){
+        .duration{margin: 1em 0;}
+    }
     @media (max-width: 769px){
         section{width: calc(100% - 2em); padding: 2em 1em;}
         section .image{margin: 1em 0;}

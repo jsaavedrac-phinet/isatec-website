@@ -3,6 +3,7 @@
 <script type="text/javascript">
 	var boton_menu = document.querySelector('.btn_menu');
 	var cerrar_menu = document.querySelector('.btn-cerrar');
+    var menu_parents = document.querySelectorAll('li a.parent');
 
 	cerrar_menu.addEventListener('click',function(){
 		document.querySelector('.menu-mobile').style.display = 'none';
@@ -46,5 +47,11 @@
                 }
 			});
         });
+
+    menu_parents.forEach(function(parent){
+        parent.addEventListener('click',function(){
+            parent.parentElement.classList.toggle('active');
+        });
+    });
 </script>
 @yield('archivojs')

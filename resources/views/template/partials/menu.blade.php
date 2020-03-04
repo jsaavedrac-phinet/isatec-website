@@ -6,7 +6,7 @@
 <li><a class="{{ active('web.admision') }}" href="{{ route('web.admision') }}">ADMISI&Oacute;N</a></li>
 @endif
     @if (count($programs) > 0)
-    <li><a class="{{ active('web.program') }}">PROGRAMAS DE ESTUDIO</a>
+    <li><a class="{{ active('web.program') }} parent">PROGRAMAS DE ESTUDIO</a>
         <ol>
             @foreach ($programs as $program)
             <li><a href="{{ route('web.program', $program['slug']) }}">{{ $program['name'] }}</a></li>
