@@ -33,7 +33,7 @@
     section ul li{margin: 0.3em 0;border-radius: 12px; width: calc(100% - 2em); max-width: calc(500px - 2em); text-align: center; list-style: none; background: var(--highlight_color); padding: 1em; display: flex; justify-content: space-between}
     section ul.posts li  {position: relative; height: 550px; overflow: hidden;flex-wrap: wrap; padding: 0; border-radius: 0px; background: var(--negrito); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px;}
     section ul.posts li .image {position: relative; align-items: flex-start; width: 100%; height: 230px;}
-    section ul.posts li .image img{height: 100%; min-width: 100%;}
+    section ul.posts li .image img{min-height: 100%; min-width: 100%;}
     section ul.posts li .content {align-items: flex-start; width: calc(100% - 2em); font-size: 0.9em;text-align: justify; padding: 0 1em; color: #FFF; height: 220px;}
     section ul.posts li .date{position: absolute; top: 0px; left: 0; background: var(--main_color); padding: 0.5em; color: #FFF; text-align: center; font-size: 1.2em; cursor: default;display: flex; letter-spacing: 1px; font-size: 0.8em;}
     section ul.posts li .content .titulo-post{white-space: pre; overflow: hidden; text-overflow: ellipsis; color: #111; font-size: 1.1em !important; text-align: center; color: var(--celeste);margin-bottom: 1em;}
