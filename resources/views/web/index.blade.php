@@ -253,7 +253,7 @@
                         <a href="{{ route('web.program', $item['slug']) }}">Ver m&aacute;s</a>
                     </div>
                     <div class="hashtag">
-                        #ViveDeltrans
+                        #CreceIsatec
                     </div>
                 </div>
                 <div class="picture">
