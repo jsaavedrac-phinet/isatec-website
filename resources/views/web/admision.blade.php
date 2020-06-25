@@ -148,7 +148,9 @@
     </div>
 </section>
 @else
-<span><h3>No se encuentra habilitado el proceso de admisión o ya ha finalizado.</h3></span>
+<section>
+    <span><h3>No se encuentra habilitado el proceso de admisión o ya ha finalizado.</h3></span>
+</section>
 @endif
 @endsection
 @section('archivojs')
