@@ -147,7 +147,7 @@
 
     </div>
 </section>
-@endif
+@else
 <span><h3>No se encuentra habilitado el proceso de admisión o ya ha finalizado.</h3></span>
 @endif
 @endsection
