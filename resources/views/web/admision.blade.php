@@ -62,6 +62,7 @@
 </style>
 @endsection
 @section('content')
+@if ($admision)
 <section>
     <h2 class="text-center mb">Participa de nuestro proceso de admisi&oacute;n. <br>Estaremos esperando a que te pongas en contacto con nosotros.</h2>
     <div class="form">
@@ -146,6 +147,9 @@
 
     </div>
 </section>
+@endif
+<span><h3>No se encuentra habilitado el proceso de admisión o ya ha finalizado.</h3></span>
+@endif
 @endsection
 @section('archivojs')
 <script src="{{asset('/js/jquery.min.js')}}" ></script>

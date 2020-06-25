@@ -31,7 +31,6 @@ class AdmisionComposer
     {
         $view
         ->with('admision', $this->admision)
-
         ;
     }
 }
