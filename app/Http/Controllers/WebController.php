@@ -144,7 +144,7 @@ class WebController extends Controller
                 $user = new UserStudent();
                 $user->name = $request->name;
                 $user->lastname = $request->lastname .' '. $request->mothers_lastname;
-                $user->username = $request->code.' '.substr($program->name,0,1);
+                $user->username = $request->code.' '.$program->first_letter;
                 $user->password =bcrypt($request->code);
                 $user->role = 3;
                 $user->status =0;
